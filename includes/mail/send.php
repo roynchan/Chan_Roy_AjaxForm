@@ -51,7 +51,7 @@ if($_POST) {
         die(json_encode(['message' => $fail]));
     }
 }else{
-    $results['message'] = "Stop being so lazy and fill out the damn form.";
+    $results['message'] = "Please Fill In All The Empty Row";
 }
 
 echo json_encode($results);

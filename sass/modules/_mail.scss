@@ -45,5 +45,17 @@ input[type=submit] {
         font-size: 1.5em;
     }
 }
+#print {
+    color: red;
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-family: $main-font-face;
+}
+#print2 {
+    color: greenyellow;
+    font-size: 1.5em;
+    margin-top: 1em;
+    font-family: $main-font-face;
+}
 
 textarea { resize: none; display: block; }
