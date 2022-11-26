@@ -30,13 +30,14 @@
             <label for="firstname">Email</label>
             <input ref="email" type="email" id="email" name="email" required>
 
-            <label for="message">Your Message ddddddd</label>
+            <label for="message">Your Message</label>
             <textarea ref="message" name="message" id="message" cols="30" rows="10"></textarea>
 
             <label for="phone">Your Phone # <i>(optional)</i></label>
             <input ref="phone" type="tel"  name="phone">
-            
-            <div class="wrapper ">
+            <div id="print" class="hide">ERROR ! Please Reveiw Your Info </div>
+            <div id="print2" class="hide">Thank you for contacting us. We will respong within 24 hours. </div>
+            <div class="wrapper">
                 <input @click.prevent="processMail" type="submit" class="submit" value="SUBMIT!">
                 <i class="fas fa-paper-plane"></i>
             </div>                              

@@ -1,7 +1,7 @@
 import { SendMail } from "./components/mailer.js";
 
 (() => {
-    let box = document.querySelector('.wrapper');
+   
 
     const { createApp } = Vue
 
@@ -15,15 +15,18 @@ import { SendMail } from "./components/mailer.js";
         methods: {
             processMailFailure(result) {
                 // show a failure message in the UI
+                let box = document.querySelector('#print');
+                box.classList.remove("hide");
                 // use this.$refs to connect to the elements on the page and mark any empty fields/inputs with an error class
-                alert('failure! and if you keep using an alert, DOUBLE failure!');        
+                    
                 // show some errors in the UI here to let the user know the mail attempt was successful
             },
 
             processMailSuccess(result) {
                 // show a success message in the UI
+
+                let btn = document.querySelector('.wrapper');
                 box.classList.add("hide");
-                alert("success! but don't EVER use alerts. They are gross.");        
                 // show some UI here to let the user know the mail attempt was successful
             },
 
