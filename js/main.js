@@ -1,6 +1,8 @@
 import { SendMail } from "./components/mailer.js";
 
 (() => {
+    let box = document.querySelector('.wrapper');
+
     const { createApp } = Vue
 
     createApp({
@@ -20,6 +22,7 @@ import { SendMail } from "./components/mailer.js";
 
             processMailSuccess(result) {
                 // show a success message in the UI
+                box.classList.add("hide");
                 alert("success! but don't EVER use alerts. They are gross.");        
                 // show some UI here to let the user know the mail attempt was successful
             },
