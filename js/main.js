@@ -15,8 +15,10 @@ import { SendMail } from "./components/mailer.js";
         methods: {
             processMailFailure(result) {
                 // show a failure message in the UI
-                let box = document.querySelector('#print');
-                box.classList.remove("hide");
+                let box = document.querySelector('.print1');
+                box.classList.add("show");
+                let box2 = document.querySelector('.print2');
+                box2.classList.remove("show");
                 // use this.$refs to connect to the elements on the page and mark any empty fields/inputs with an error class
                     
                 // show some errors in the UI here to let the user know the mail attempt was successful
@@ -24,9 +26,12 @@ import { SendMail } from "./components/mailer.js";
 
             processMailSuccess(result) {
                 // show a success message in the UI
-
+                let box2 = document.querySelector('.print2');
+                box2.classList.add("show");
                 let btn = document.querySelector('.wrapper');
-                box.classList.add("hide");
+                btn.classList.remove("show");
+                let box = document.querySelector('.print1');
+                box.classList.remove("show");
                 // show some UI here to let the user know the mail attempt was successful
             },
 
